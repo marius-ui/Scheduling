@@ -394,7 +394,7 @@ class Instance:
                 self.cancelEle(a,tmpS)
                 index = support.index(a)
                 self.cancelEle(probas[index],tmpP)
-        return  np.array(tmpS.dot(tmpP))/sum(tmpP)
+        return  np.array(tmpS).dot(tmpP)/sum(tmpP)
 
     def get_EPij_NantInf(self, instance, i, j, a):
         """
@@ -414,7 +414,7 @@ class Instance:
                 self.cancelEle(a, tmpS)
                 index = support.index(a)
                 self.cancelEle(probas[index], tmpP)
-        return np.array(tmpS.dot(tmpP)) / sum(tmpP)
+        return np.array(tmpS).dot(tmpP) / sum(tmpP)
 
     def get_EPij_NantEqu(self, instance, i, j, a):
         """
@@ -435,7 +435,7 @@ class Instance:
                 newSupport.append(x)
                 index = support.index(x)
                 newProbas.append(probas[index])
-        return np.array(newSupport.dot(newProbas)) / sum(newProbas)
+        return np.array(newSupport).dot(newProbas) / sum(newProbas)
 
     # def Validation_Set(self):
 
